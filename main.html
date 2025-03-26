@@ -10,6 +10,182 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      footer {
+        background-color: #1a1a1a;
+        color: white;
+        font-family: Arial, sans-serif;
+        padding: 2rem 0;
+      }
+
+      .content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      .logo-details .logo_name {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .media-icons {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .media-icons a {
+        color: white;
+        font-size: 1.2rem;
+        background-color: #333;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s ease;
+      }
+
+      .media-icons a:hover {
+        background-color: #e60023;
+      }
+
+      .link-boxes {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .link-boxes div {
+        flex: 1;
+        min-width: 150px;
+      }
+
+      .link-boxes h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+      }
+
+      .link-boxes h3::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+      }
+
+      .link-boxes ul {
+        list-style: none;
+      }
+
+      .link-boxes ul li {
+        margin-bottom: 0.4rem;
+      }
+
+      .link-boxes ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.3s ease;
+      }
+
+      .link-boxes ul li a:hover {
+        color: #e60023;
+      }
+
+      .bottom-details {
+        background-color: #2c2c2c;
+        padding: 0.8rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .bottom-details p {
+        font-size: 0.8rem;
+      }
+
+      .bottom-details a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.8rem;
+        transition: color 0.3s ease;
+      }
+
+      .bottom-details a:hover {
+        color: #e60023;
+      }
+
+      /* Responsiveness */
+      @media (max-width: 768px) {
+        .top {
+          flex-direction: column;
+          gap: 1rem;
+          margin-bottom: 1rem;
+        }
+
+        .link-boxes {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          gap: 1.5rem;
+        }
+
+        .link-boxes h3::after {
+          left: 50%;
+          transform: translateX(-50%);
+          width: 50%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .logo-details .logo_name {
+          font-size: 1.5rem;
+        }
+
+        .media-icons a {
+          width: 30px;
+          height: 30px;
+          font-size: 1rem;
+        }
+
+        .link-boxes h3 {
+          font-size: 1rem;
+        }
+
+        .link-boxes ul li a {
+          font-size: 0.8rem;
+        }
+
+        .bottom-details {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -20,15 +196,54 @@
             <span class="logo_name">company</span>
           </div>
           <div class="media-icons">
-            <!-- your code here -->
+            <a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="https://youtube.com" target="_blank"><i class="fa fa-youtube"></i></a>
           </div>
         </div>
         <div class="link-boxes">
-          <!-- your code here -->
+          <div class="box">
+            <h3>Links</h3>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/get-started">Get Started</a></li>
+            </ul>
+          </div>
+          <div class="box">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="/services/app-design">App Design</a></li>
+              <li><a href="/services/web-design">Web Design</a></li>
+              <li><a href="/services/logo-design">Logo Design</a></li>
+              <li><a href="/services/banner-design">Banner Design</a></li>
+            </ul>
+          </div>
+          <div class="box">
+            <h3>Other Services</h3>
+            <ul>
+              <li><a href="/services/seo">SEO</a></li>
+              <li><a href="/services/content-marketing">Content Marketing</a></li>
+              <li><a href="/services/prints">Prints</a></li>
+              <li><a href="/services/social-media">Social Media</a></li>
+            </ul>
+          </div>
+          <div class="box">
+            <h3>Contact</h3>
+            <ul>
+              <li><a href="tel:+918879887262">+91 8879887262</a></li>
+              <li><a href="tel:+918879887262">+91 8879887262</a></li>
+              <li><a href="mailto:contact@company.com">contact@company.com</a></li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="bottom-details">
-        <!-- your code here -->
+        <p>Copyright © 2021 company.</p>
+        <a href="/privacy-policy">Privacy policy</a>
       </div>
     </footer>
   </body>
